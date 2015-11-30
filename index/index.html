@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="parallax">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+       height:2000px;
+    }
+    .img {
+     background-image: url('1.jpg');
+     width:100%;
+     height:500px;
+     margin:0px;
+     margin-top:50px;
+
+     position: relative;
+    }
+    .txt {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      text-align: center;
+      font-size: 36px;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <h1>angular parallax</h1>
+  <div ang-parallax p-ratio="0.1" p-css="transform:translateY">
+    <div ang-parallax p-ratio="0.5" p-css="background-position-y" p-init-val="-100" class="img">
+      <p ang-parallax p-ratio="0.9" p-css="top" p-init-val="100" class="txt">I am sexy</p>
+    </div>
+  </div>
+  <script src="../angular.min.js"></script>
+  <script src="../angularparallax.js"></script>
+</body>
+</html>
